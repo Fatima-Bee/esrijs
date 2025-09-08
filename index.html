@@ -21,7 +21,6 @@
     width: 100%;
   }
 </style>
-
 </head>
 <body>
 
@@ -36,7 +35,7 @@
     "esri/config",
     "esri/Map",
     "esri/views/MapView"
-  ], function(esriConfig, Map, MapView) {
+  ], function (esriConfig, Map, MapView) {
 
     esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurN9CA4Z_pltmmtVA5PycbBd6Xh_gP36QMlUpOVbLusJYkisflOUTkTy5J5P_3Bi5CxQBoZ5njlWXUZwxL4p33Np7NaVrsAcaBvn16qeXUxvAee7sMBAxMrkZ2_YDkQnO_6zLEZn_I6Wqh0xADrbJhAQsxwlvFC_h1VZxdLeFSe1r1S_6qLo_mA6U_s5QSRApILUxVSfg5ZV_DSo_R6aKo1Ru7ix3BeWjsvOg2NaoGoPBAT1_l9mao6ca";
 
@@ -44,7 +43,7 @@
       basemap: "arcgis-light-gray" //basemap layer repleaced streets as per error message in inspector panel "DEPRECATED - The streets basemap has entered mature support and is no longer being updated"
     });
 
-    const view = MapView({
+    const view = new MapView({
       map: map,
       center: [-97.7431, 30.2672], //Long and Lat
       zoom: 13, //zoom level
